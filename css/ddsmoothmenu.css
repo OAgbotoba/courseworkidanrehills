@@ -1,0 +1,265 @@
+.ddsmoothmenu{
+		
+}
+
+.ddsmoothmenu ul{
+	width:100%;
+    z-index:130px;
+	margin: 0;
+  	padding: 0;
+    list-style-type:none;
+	line-height: 30px; 
+	-webkit-border-radius:4px 4px 0 0;
+}
+
+/*Top level list items*/
+.ddsmoothmenu ul li{
+	position: relative;
+    display: block;
+	float: left;
+    padding-top:25px;
+	width: 11%;
+}
+
+/*Top level menu link items style*/
+.ddsmoothmenu ul li a {
+	display: block;
+    border-top:0px;
+    height: 30px;
+    line-height: 23px;
+    font-size: 14px;
+    padding-top: 12px;
+    color:#DEB887;	
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+}
+
+* html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.ddsmoothmenu ul li a.selected, .ddsmoothmenu ul li a:hover { /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+	color:#DEB887;
+	font-size:13px;	
+	text-decoration: none;
+    outline: none;
+    border-radius: 0 0 0 0px;
+	text-align: center;
+	border-bottom: #DEB887 3px solid;
+    width:100%;
+}
+
+/*1st sub level menu*/
+.ddsmoothmenu ul li ul {
+	position: absolute;
+	left: 0;
+	width:130px;
+	padding:0px 7px;
+	display: none; /*collapse all sub menus to begin with*/
+	visibility:hidden;
+	background-color:rgb(15, 24, 32);
+	border-top: 3px solid #DEB887;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.ddsmoothmenu ul li ul li{
+		display: list-item;
+		float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.ddsmoothmenu ul li ul li ul{
+top: 0;
+}
+
+/* Sub level menu links style */
+.ddsmoothmenu ul li ul li a{
+	font-weight: 200;
+	width: 130px; /*width of sub menus*/
+	height: 20px;
+	padding: 0 10px;
+	font-size: 14px;	
+	text-align: left;
+	background: none;
+	color:#DEB887;
+	border-bottom: 2px solid #222;
+	
+}
+
+.ddsmoothmenu ul li ul li a.selected, .ddsmoothmenu ul li ul li a:hover {
+	color: #000;
+	font-weight: 200;
+	background:#DEB887;
+	font-size: 14px;
+	width:130px;
+	text-decoration: none;
+	outline: none;
+	text-align: left;
+
+}
+
+/* Holly Hack for IE \*/
+* html .ddsmoothmenu{height: 1%;} /*Holly Hack for IE7 and below*/
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+position: absolute;
+top: 12px;
+right: 7px;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 6px;
+right: 5px;
+}
+
+/* ######### CSS for shadow added to sub menus  ######### */
+
+.ddshadow{
+position: absolute;
+left: 0;
+top: 0;
+width: 0;
+height: 0;
+}
+
+.toplevelshadow{ /*shadow opacity. Doesn't work in IE*/
+opacity: 0.5;
+}
+
+/* menu */
+.services {
+	float:left;
+}
+.services ul{
+	margin: 0;
+	padding-left:20px;
+	padding: 0;
+	list-style:none;
+	
+}
+.services ul li {
+	display:list-item;
+	width:220px;
+	height:35px;
+}
+.services ul li a {
+	width:220px;
+	height:24px;
+	float:left;
+	color:#093;
+	clear:left;
+}
+.services ul li a:hover {
+	background-color:#CCC;height:35px;width:220px;padding:0 0 0;
+}
+.services ul li a.current{
+height:35px;width: auto;text-decoration:underline;padding:0 0 0x;
+
+}
+.link--yaku span {
+	display: inline-block;
+	position: relative;
+	-webkit-transform: perspective(1000px) rotate3d(0,1,0,0deg);
+	transform: perspective(1000px) rotate3d(0,1,0,0deg);
+	-webkit-transition: -webkit-transform 0.5s, color 0.5s;
+	transition: transform 0.5s, color 0.5s;
+}
+
+.link--yaku:hover span {
+	color: white;
+	-webkit-transform: perspective(1000px) rotate3d(0,1,0,360deg);
+	transform: perspective(1000px) rotate3d(0,1,0,360deg);
+}
+
+.link--yaku span:nth-child(4),
+.link--yaku:hover span:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.link--yaku span:nth-child(3),
+.link--yaku:hover span:nth-child(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.link--yaku span:nth-child(2),
+.link--yaku:hover span:nth-child(3) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.link--yaku span:first-child,
+.link--yaku:hover span:nth-child(4) {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+/*--end hover--*/
+/*--drop-down--*/
+.dropdown-menu {
+    min-width: 115px;
+}
+ul.dropdown-menu li {
+    border-bottom: 1px solid #888;
+}
+.dropdown-menu > li > a {
+    padding: 0.8em 1.5em;
+    font-size: 1em;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #F00000;
+}
+.navbar-left span.caret {
+    margin-left: 10px;
+}
+.navbar-right .dropdown-menu {
+    right: auto;
+    left: 0;
+    top: 171%;
+    border-top: 5px solid #CC2127;
+	padding: 0;
+}
+/*--//drop-down--*/
+.header-text {
+    width: 13%;
+    margin-left:5em;
+}
+.header-text p {
+    font-size: 0.8em;
+    line-height: 1.6em;
+    color: #999;
+}
+.header-right {
+    float: right;
+}
+.header-none {
+    float: none;
+}
+.top-nav-text {
+    margin: 0 0 1em 4.5em;
+}
+.top-nav-text ul li {
+    display: inline-block;
+    margin-right: 2em;
+    vertical-align: middle;
+}
+.top-nav-text ul li:nth-child(3) {
+    margin: 0;
+}
+.top-nav-text li {
+    font-size: 0.9em;
+    color: #999;
+}
+.top-nav-text  a.email-link {
+    color: #666;
+}
+.top-nav-text a.email-link:hover{
+    color: #F00000;
+}
+.top-nav-text li span {
+    color: #666;
+}
